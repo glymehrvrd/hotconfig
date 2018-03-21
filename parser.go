@@ -9,7 +9,7 @@ import (
 func Parse(filename string, out interface{}) error {
 	file, err := ioutil.ReadFile(filename)
 	if err != nil {
-		rlog.Errorln("read config file error[%s], filename[%s]",
+		rlog.Errorf("read config file error[%s], filename[%s]",
 			err.Error(), filename)
 		return err
 	}
@@ -17,7 +17,7 @@ func Parse(filename string, out interface{}) error {
 	err = json.Unmarshal(file, out)
 
 	if err != nil {
-		rlog.Debugln("unmarshal config json file error[%s]", err.Error())
+		rlog.Debugf("unmarshal config json file error[%s]", err.Error())
 		return err
 	}
 
