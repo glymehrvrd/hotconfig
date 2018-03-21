@@ -1,7 +1,7 @@
 package hotconfig
 
 import (
-	"rlog"
+	"github.com/glymehrvrd/rlog"
 	"encoding/json"
 	"io/ioutil"
 )
